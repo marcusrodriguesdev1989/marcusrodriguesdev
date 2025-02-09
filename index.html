@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="./img/code-branch.png" />
+    <script src="src/js/head.js"></script>
+    <title>Marcus R. Portifólio</title>
+</head>
+
+<body>
+    <!--NAVBAR-->
+    <header class="sticky top-0 w-full z-20">
+        <nav class="bg-white border-gray-200 px-4 lg:px-6 py-2 dark:bg-gray-900">
+            <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
+                <a href="#" class="flex items-center gap-2">
+                    <svg class="w-6 h-6 text-green-400 dark:text-green-400" aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M8 8v8m0-8a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm0 8a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8-8a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm0 0a4 4 0 0 1-4 4h-1a3 3 0 0 0-3 3" />
+                    </svg>
+
+                    <span
+                        class="self-center text-sm lg:text-xl md:text-xl font-semibold whitespace-nowrap dark:text-white">Marcus
+                        Rodrigues DEV</span>
+                </a>
+                <div class="flex items-center lg:order-2">
+                    <a 
+                        target="_blank"
+                        href="https://wa.me/551153818319?text=Olá vim pelo site e gostaria de mais informações"
+                        class="flex lg:flex hidden lg:block bg-green-500 flex items-center text-white dark:text-white focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-4 lg:px-4 py-4 mr-2 dark:hover:bg-green-600 focus:outline-none">
+                        <svg class="w-4 h-4 lg:w-5 h-5 text-white dark:text-white dark:shadow-green-600"
+                            aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                            viewBox="0 0 24 24">
+                            <path fill="currentColor" fill-rule="evenodd"
+                                d="M12 4a8 8 0 0 0-6.895 12.06l.569.718-.697 2.359 2.32-.648.379.243A8 8 0 1 0 12 4ZM2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10a9.96 9.96 0 0 1-5.016-1.347l-4.948 1.382 1.426-4.829-.006-.007-.033-.055A9.958 9.958 0 0 1 2 12Z"
+                                clip-rule="evenodd" />
+                            <path fill="currentColor"
+                                d="M16.735 13.492c-.038-.018-1.497-.736-1.756-.83a1.008 1.008 0 0 0-.34-.075c-.196 0-.362.098-.49.291-.146.217-.587.732-.723.886-.018.02-.042.045-.057.045-.013 0-.239-.093-.307-.123-1.564-.68-2.751-2.313-2.914-2.589-.023-.04-.024-.057-.024-.057.005-.021.058-.074.085-.101.08-.079.166-.182.249-.283l.117-.14c.121-.14.175-.25.237-.375l.033-.066a.68.68 0 0 0-.02-.64c-.034-.069-.65-1.555-.715-1.711-.158-.377-.366-.552-.655-.552-.027 0 0 0-.112.005-.137.005-.883.104-1.213.311-.35.22-.94.924-.94 2.16 0 1.112.705 2.162 1.008 2.561l.041.06c1.161 1.695 2.608 2.951 4.074 3.537 1.412.564 2.081.63 2.461.63.16 0 .288-.013.4-.024l.072-.007c.488-.043 1.56-.599 1.804-1.276.192-.534.243-1.117.115-1.329-.088-.144-.239-.216-.43-.308Z" />
+                        </svg>
+                        WhatsApp
+                    </a>
+                    <button id="theme-toggle" type="button"
+                        class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5">
+                        <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                        </svg>
+                        <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+                                fill-rule="evenodd" clip-rule="evenodd"></path>
+                        </svg>
+                    </button>
+                    <button data-collapse-toggle="mobile-menu-2" type="button"
+                        class="inline-flex items-center p-1 ml-1 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-1 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                        aria-controls="mobile-menu-2" aria-expanded="false">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                        <svg class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                    </button>
+                </div>
+                <div class="hidden items-center w-full lg:flex lg:w-auto lg:order-1" id="mobile-menu-2">
+                    <ul class="flex flex-col items-center mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
+                        <li>
+                            <a href="#home"
+                                class="block py-2 pr-4 pl-3 text-black rounded bg-primary-700 lg:bg-transparent lg:text-primary-700 lg:p-0 dark:text-white"
+                                aria-current="page">Home</a>
+                        </li>
+                        <li>
+                            <a href="#sobre"
+                                class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">Sobre</a>
+                        </li>
+                        <li>
+                            <a href="#projetos"
+                                class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">Projetos</a>
+                        </li>
+                        <li>
+                            <a href="#servicos"
+                                class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">Serviços</a>
+                        </li>
+                        <li>
+                            <a href="#certificados"
+                                class="hidden lg:block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">Certificados</a>
+                        </li>
+                        <li>
+                            <a href="#contatos"
+                                class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">Contatos</a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="block lg:hidden flex lg:flex bg-green-500 flex items-center justify-center text-white dark:text-white focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-4 lg:px-4 py-4 mr-2 dark:hover:bg-green-600 focus:outline-none">
+                                <svg class="w-4 h-4 lg:w-5 h-5 text-white dark:text-white dark:shadow-green-600"
+                                    aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                    fill="none" viewBox="0 0 24 24">
+                                    <path fill="currentColor" fill-rule="evenodd"
+                                        d="M12 4a8 8 0 0 0-6.895 12.06l.569.718-.697 2.359 2.32-.648.379.243A8 8 0 1 0 12 4ZM2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10a9.96 9.96 0 0 1-5.016-1.347l-4.948 1.382 1.426-4.829-.006-.007-.033-.055A9.958 9.958 0 0 1 2 12Z"
+                                        clip-rule="evenodd" />
+                                    <path fill="currentColor"
+                                        d="M16.735 13.492c-.038-.018-1.497-.736-1.756-.83a1.008 1.008 0 0 0-.34-.075c-.196 0-.362.098-.49.291-.146.217-.587.732-.723.886-.018.02-.042.045-.057.045-.013 0-.239-.093-.307-.123-1.564-.68-2.751-2.313-2.914-2.589-.023-.04-.024-.057-.024-.057.005-.021.058-.074.085-.101.08-.079.166-.182.249-.283l.117-.14c.121-.14.175-.25.237-.375l.033-.066a.68.68 0 0 0-.02-.64c-.034-.069-.65-1.555-.715-1.711-.158-.377-.366-.552-.655-.552-.027 0 0 0-.112.005-.137.005-.883.104-1.213.311-.35.22-.94.924-.94 2.16 0 1.112.705 2.162 1.008 2.561l.041.06c1.161 1.695 2.608 2.951 4.074 3.537 1.412.564 2.081.63 2.461.63.16 0 .288-.013.4-.024l.072-.007c.488-.043 1.56-.599 1.804-1.276.192-.534.243-1.117.115-1.329-.088-.144-.239-.216-.43-.308Z" />
+                                </svg>
+                                WhatsApp
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!--FIM-->
+    <!--HOME-->
+    <section id="home" class="mb-0 dark:bg-gray-900 md:flex">
+        <div class="grid max-w-screen-xl mx-auto pt-10 pb-10 lg:gap-8 lg:pl-3 lg:grid-cols-12">
+            <div class="text-center px-8 lg:px-16 place-self-center lg:mt-10 lg:col-span-7">
+                <h1
+                    class="flex text-center max-w-2xl mb-4 text-4xl font-semibold tracking-tight leading-none md:text-5xl xl:text-4xl dark:text-white">
+                    < Olá! Bem vindo ao meu portifólio. />
+                </h1>
+                <p class="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400">
+                    Se você procura um Desenvolvedor web Front-end, com soluções
+                    eficazes, designs responsivos e sofisticados, você está no lugar
+                    certo. Vamos trabalhar juntos em seus projetos e turbinar seus
+                    negócios!
+                </p>
+
+                <a 
+                target="_blank"
+                href="https://wa.me/551153818319?text=Olá vim pelo site e gostaria de mais informações"
+                    class="flex items-center justify-center bg-green-500 flex text-white dark:text-white focus:ring-4 focus:ring-green-300 font-extrabold rounded-lg text-sm lg:text3xl px-4 lg:px-4 py-4 mr-2 dark:hover:bg-green-600 focus:outline-none">
+                    <svg class="w-4 h-4 lg:w-5 h-5 text-white dark:text-white dark:shadow-green-600" aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                        <path fill="currentColor" fill-rule="evenodd"
+                            d="M12 4a8 8 0 0 0-6.895 12.06l.569.718-.697 2.359 2.32-.648.379.243A8 8 0 1 0 12 4ZM2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10a9.96 9.96 0 0 1-5.016-1.347l-4.948 1.382 1.426-4.829-.006-.007-.033-.055A9.958 9.958 0 0 1 2 12Z"
+                            clip-rule="evenodd" />
+                        <path fill="currentColor"
+                            d="M16.735 13.492c-.038-.018-1.497-.736-1.756-.83a1.008 1.008 0 0 0-.34-.075c-.196 0-.362.098-.49.291-.146.217-.587.732-.723.886-.018.02-.042.045-.057.045-.013 0-.239-.093-.307-.123-1.564-.68-2.751-2.313-2.914-2.589-.023-.04-.024-.057-.024-.057.005-.021.058-.074.085-.101.08-.079.166-.182.249-.283l.117-.14c.121-.14.175-.25.237-.375l.033-.066a.68.68 0 0 0-.02-.64c-.034-.069-.65-1.555-.715-1.711-.158-.377-.366-.552-.655-.552-.027 0 0 0-.112.005-.137.005-.883.104-1.213.311-.35.22-.94.924-.94 2.16 0 1.112.705 2.162 1.008 2.561l.041.06c1.161 1.695 2.608 2.951 4.074 3.537 1.412.564 2.081.63 2.461.63.16 0 .288-.013.4-.024l.072-.007c.488-.043 1.56-.599 1.804-1.276.192-.534.243-1.117.115-1.329-.088-.144-.239-.216-.43-.308Z" />
+                    </svg>
+                    WhatsApp
+                </a>
+            </div>
+            <div class="flex flex-col items-center justify-center lg:flex lg:justify-end lg:mt-0 lg:col-span-5">
+                <img class="w-64 rounded-full mr-5" src="img/fotominha3-removebg-preview.png" alt="mockup" />
+                <div class="flex flex-col justify-center text-center">
+                    <h2 class="text-gray-800 dark:text-white text-base font-bold mt-8">Redes Sociais</h2>
+
+                    <ul class="flex items-center mt-4 space-x-4">
+                        <li class="bg-[#e6e6e6cf] h-10 w-10 rounded-full flex items-center justify-center shrink-0">
+                            <a 
+                                target="_blank"
+                                href="https://wa.me/551153818319?text=Olá vim pelo site e gostaria de mais informações">
+                                <i class="fa-brands fa-whatsapp text-5xl dark:text-white"></i>
+                            </a>
+                        </li>
+                        <li class="bg-[#e6e6e6cf] h-10 w-10 rounded-full flex items-center justify-center shrink-0">
+                            <a  
+                                target="_blank"
+                                href="https://github.com/marcusrodriguesdev1989">
+                                <i class="fa-brands fa-github text-5xl dark:text-white"></i>
+                            </a>
+                        </li>
+                        <li class="bg-[#e6e6e6cf] h-10 w-10 rounded-full flex items-center justify-center shrink-0">
+                            <a  
+                                target="_blank"
+                                href="https://www.instagram.com/marcusrodrigues.dev/">
+                                <i class="fa-brands fa-instagram text-5xl dark:text-white"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <div class="mb-5 mx-auto text-center md:max-w-screen-md lg:max-w-screen-lg">
+        <span class="font-bold text-4xl text-black uppercase">Skills</span>
+        <div class="flex lg:flex flex-wrap justify-center items-center mt-8 text-gray-500 sm:justify-between">
+            <a 
+                href="https://www.youtube.com/watch?v=RISPTY1Lh2A&t=1s" 
+                target="_blank" 
+                class="mr-5 mb-5 font-bold lg:mb-0 hover:text-gray-800 dark:hover:text-gray-400" ,>
+                <img class="w-20 h-20 text-gray-800 dark:text-white" src="img/icons8-html-480.png" alt="" />
+
+                HTML
+            </a>
+            <a 
+                href="https://www.youtube.com/watch?v=LWU2OR19ZG4" 
+                target="_blank" 
+                class="mr-5 mb-5 font-bold lg:mb-0 hover:text-gray-800 dark:hover:text-gray-400" ,>
+                <img class="w-20 h-20 text-gray-800 dark:text-white" src="img/icons8-css-480.png" alt="" />
+
+                CSS </a>
+            <a 
+                href="https://www.youtube.com/watch?v=oWSxNI8Pg9k" 
+                target="_blank" 
+                class="mr-5 mb-5 font-bold lg:mb-0 hover:text-gray-800 dark:hover:text-gray-400" ,>
+                <img class="w-20 h-20 text-gray-800 dark:text-white" src="img/icons8-javascript-480.png" alt="" />
+
+                JavaSript </a>
+            <a 
+                href="https://www.youtube.com/watch?v=fZRSmfjltAc&t=43s" 
+                target="_blank"
+                class="mr-5 mb-5 font-bold lg:mb-0 hover:text-gray-800 dark:hover:text-gray-400" ,>
+                <img class="w-20 h-20 text-gray-800 dark:text-white" src="img/icons8-tailwind-css-480.png" alt="" />
+
+                Tailwind
+            </a>
+            <a 
+                href="https://www.youtube.com/watch?v=DXmCU7v9glM" 
+                target="_blank" 
+                class="mr-5 mb-5 font-bold lg:mb-0 hover:text-gray-800 dark:hover:text-gray-400" ,>
+                <img class="w-20 h-20 text-gray-800 dark:text-white" src="img/icons8-python-480.png" alt="" />
+
+                Python
+            </a>
+        </div>
+    </div>
+    <!--FIM-->
+    <!--SOBRE-->
+    <section id="sobre" class="bg-white dark:bg-gray-900">
+        <div class="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
+            <div class="mr-auto place-self-center lg:col-span-7">
+                <h1 class="max-w-2xl mb-4 text-4xl font-extrabold leading-none md:text-4xl xl:text-4xl dark:text-white">
+                    Sobre
+                </h1>
+                <p class="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400">
+                    "Olá, meu nome é Marcus Rodrigues, sou um desenvolvedor web
+                    Front-end apaixonado por criar interfaces intuitivas e experiências
+                    digitais memoráveis. <br />
+                    Com formação pela Alura, possuo conhecimento em HTML, CSS,
+                    JavaScript, Tailwind e Python. Minhas habilidades me permitem criar
+                    sites e aplicações web performáticos e responsivos. <br />
+                    Atualmente, busco novas oportunidades para aplicar meus
+                    conhecimentos e contribuir para o desenvolvimento de projetos
+                    inovadores. Minha maior paixão é transformar ideias em realidade
+                    através de código, sempre buscando as melhores práticas e soluções
+                    tecnológicas."
+                </p>
+            </div>
+            <div class="lg:mt-0 lg:col-span-5 lg:flex">
+                <img src="img/1669382153450.jpg" alt="mockup" />
+            </div>
+        </div>
+    </section>
+    <!--FIM-->
+    <!--Projetos-->
+    <section id="projetos" class="bg-white dark:bg-gray-900 antialiased">
+        <div class="max-w-screen-xl px-4 py-8 mx-auto lg:px-6 sm:py-16 lg:py-24">
+            <div class="max-w-2xl mx-auto text-center">
+                <h2
+                    class="text-4xl font-extrabold leading-tight tracking-tight text-gray-900 sm:text-4xl dark:text-white mb-10">
+                    Projetos
+                </h2>
+            </div>
+            <div
+                class="grid grid-cols-1 mt-12 text-center sm:mt-16 gap-x-20 gap-y-12 sm:grid-cols-2 lg:grid-cols-3 py-0 px-1">
+                <div class="border border-gray-700 rounded-lg space-y-4">
+                    <span
+                        class="bg-gray-100 text-gray-900 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300">
+                        HTML-CSS-SASS
+                    </span>
+                    <h3 class="text-2xl font-bold leading-tight text-gray-900 dark:text-white">
+                        Barbearia
+                    </h3>
+                    <div class="py-0 px-1">
+                        <img src="img/barbearia.png" alt="" />
+                    </div>
+
+                    <a target="_blank" href="https://barbeariamaxibarber2024.vercel.app/" title=""
+                        class="text-white bg-primary-700 justify-center hover:bg-primary-800 inline-flex items-center focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
+                        role="button">
+                        Visite o site
+                        <svg aria-hidden="true" class="w-5 h-5 ml-2 -mr-1" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd"
+                                d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </a>
+                </div>
+
+                <div class="border border-gray-700 rounded-lg space-y-4">
+                    <span
+                        class="bg-gray-100 text-gray-900 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300">
+                        HTML-CSS-JavaScript
+                    </span>
+                    <h3 class="text-2xl font-bold leading-tight text-gray-900 dark:text-white">
+                        Guitar School
+                    </h3>
+                    <div class="py-0 px-1">
+                        <img src="img/guitarschool.png" alt="" />
+                    </div>
+
+                    <a target="_blank" href="https://guitarschool-seven.vercel.app/" title=""
+                        class="text-white bg-primary-700 justify-center hover:bg-primary-800 inline-flex items-center focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
+                        role="button">
+                        Visite o site
+                        <svg aria-hidden="true" class="w-5 h-5 ml-2 -mr-1" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd"
+                                d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </a>
+                </div>
+
+                <div class="border border-gray-700 rounded-lg space-y-4">
+                    <span
+                        class="bg-gray-100 text-gray-900 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300">
+                        HTML-CSS-JavaScript
+                    </span>
+                    <h3 class="text-2xl font-bold leading-tight text-gray-900 dark:text-white">
+                        Hamburgueria
+                    </h3>
+                    <div class="py-0 px-1">
+                        <img src="img/marksburguer.png" alt="" />
+                    </div>
+
+                    <a target="_blank" href="https://marksburguer.vercel.app/" title=""
+                        class="text-white bg-primary-700 justify-center hover:bg-primary-800 inline-flex items-center focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
+                        role="button">
+                        Visite o site
+                        <svg aria-hidden="true" class="w-5 h-5 ml-2 -mr-1" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd"
+                                d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </a>
+                </div>
+                <div class="border border-gray-700 rounded-lg space-y-4">
+                    <span
+                        class="bg-gray-100 text-gray-900 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300">
+                        HTML-CSS-JavaScript
+                    </span>
+                    <h3 class="text-2xl font-bold leading-tight text-gray-900 dark:text-white">
+                        Clima-Dev
+                    </h3>
+                    <div class="py-0 px-1">
+                        <img src="img/previsao-tempo.png" alt="" />
+                    </div>
+
+                    <a target="_blank" href="https://climadev-one.vercel.app/" title=""
+                        class="text-white bg-primary-700 justify-center hover:bg-primary-800 inline-flex items-center focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
+                        role="button">
+                        Visite o site
+                        <svg aria-hidden="true" class="w-5 h-5 ml-2 -mr-1" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd"
+                                d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </a>
+                </div>
+                <div class="border border-gray-700 rounded-lg space-y-4">
+                    <span
+                        class="bg-gray-100 text-gray-900 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300">
+                        JavaScript
+                    </span>
+                    <h3 class="text-2xl font-bold leading-tight text-gray-900 dark:text-white">
+                        Drum Midi
+                    </h3>
+                    <div class="py-0 px-1">
+                        <img src="img/drummidi.png" alt="" />
+                    </div>
+
+                    <a target="_blank" href="https://aluramididrum.vercel.app/" title=""
+                        class="text-white bg-primary-700 justify-center hover:bg-primary-800 inline-flex items-center focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
+                        role="button">
+                        Visite o site
+                        <svg aria-hidden="true" class="w-5 h-5 ml-2 -mr-1" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd"
+                                d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </a>
+                </div>
+                <div class="border border-gray-700 rounded-lg space-y-4">
+                    <span
+                        class="bg-gray-100 text-gray-900 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300">
+                        HTML-CSS-SASS
+                    </span>
+                    <h3 class="text-2xl font-bold leading-tight text-gray-900 dark:text-white">
+                        Max Pet
+                    </h3>
+                    <div class="py-0 px-1">
+                        <img src="img/maxpet.png" alt="" />
+                    </div>
+
+                    <a target="_blank" href="https://maxpet.vercel.app/" title=""
+                        class="text-white bg-primary-700 justify-center hover:bg-primary-800 inline-flex items-center focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-3 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
+                        role="button">
+                        Visite o site
+                        <svg aria-hidden="true" class="w-5 h-5 ml-2 -mr-1" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd"
+                                d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--FIM-->
+    <!--SERVIÇOS-->
+    <section id="servicos" class="bg-white dark:bg-gray-900">
+        <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
+            <div class="mx-auto max-w-screen-md text-center mb-8 lg:mb-12">
+                <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">
+                    Meus Serviços
+                </h2>
+                <p class="mb-5 font-light text-gray-500 sm:text-xl dark:text-gray-400">
+                    Especialista em sites como landing pages, portifólios, constitucionais, e-commerce, cardapio online,
+                    entre outros.
+                </p>
+            </div>
+            <div class="space-y-8 lg:grid lg:grid-cols-2 sm:gap-6 xl:gap-10 lg:space-y-0">
+                <!-- Cards-->
+                <div
+                    class="flex flex-col p-6 mx-auto max-w-lg text-center text-gray-900 bg-white rounded-lg border border-gray-100 shadow dark:border-gray-600 xl:p-8 dark:bg-gray-800 dark:text-white">
+                    <h3 class="mb-4 text-2xl font-semibold">Design e desenvolvimento de interfaces web:</h3>
+                    <p class="font-light text-gray-500 sm:text-lg dark:text-gray-400">
+                        Crio interfaces personalizadas e responsivas que se adaptam a qualquer dispositivo, desde
+                        smartphones até desktops, proporcionando uma experiência de usuário consistente e agradável.
+                    </p>
+                </div>
+                <div
+                    class="flex flex-col p-6 mx-auto max-w-lg text-center text-gray-900 bg-white rounded-lg border border-gray-100 shadow dark:border-gray-600 xl:p-8 dark:bg-gray-800 dark:text-white">
+                    <h3 class="mb-4 text-2xl font-semibold">Implementação de interfaces interativas:</h3>
+                    <p class="font-light text-gray-500 sm:text-lg dark:text-gray-400">
+                        Utilizo JavaScript e TypeScript para adicionar funcionalidades dinâmicas às suas páginas, como
+                        animações, validação de formulários, manipulação de dados e muito mais.
+                    </p>
+                </div>
+                <div
+                    class="flex flex-col p-6 mx-auto max-w-lg text-center text-gray-900 bg-white rounded-lg border border-gray-100 shadow dark:border-gray-600 xl:p-8 dark:bg-gray-800 dark:text-white">
+                    <h3 class="mb-4 text-2xl font-semibold">Otimização de desempenho:</h3>
+                    <p class="font-light text-gray-500 sm:text-lg dark:text-gray-400">
+                        Minimizando o tempo de carregamento das páginas e garantindo uma experiência rápida e fluida
+                        para seus usuários. </p>
+                </div>
+                <div
+                    class="flex flex-col p-6 mx-auto max-w-lg text-center text-gray-900 bg-white rounded-lg border border-gray-100 shadow dark:border-gray-600 xl:p-8 dark:bg-gray-800 dark:text-white">
+                    <h3 class="mb-4 text-2xl font-semibold">Adaptação a diferentes navegadores e dispositivos:</h3>
+                    <p class="font-light text-gray-500 sm:text-lg dark:text-gray-400">
+                        Garanto que suas aplicações funcionem perfeitamente em todos os principais navegadores e
+                        dispositivos, oferecendo uma experiência consistente para todos os seus usuários. </p>
+                </div>
+
+    </section>
+    <!--FIM-->
+    <!--certificados-->
+    <section id="certificados" class="hidden lg:block flex items-center justify-center bg-white dark:bg-gray-900">
+        <div class="">
+            <div class="items-center justify-center">
+                <h1
+                    class="mb-4 text-4xl text-center font-extrabold leading-none md:text-4xl xl:text-4xl dark:text-white">
+                    Certificados
+                </h1>
+                <div class="justify-center lg:grid lg:grid-cols-1 flex items-center justify-center">
+                    <div class="lg:col-span-2 text-center">
+                        <h4 class="text-white text-2xl">
+                            Front-end (Frente) = Alura
+                        </h4>
+                        <img src="img/certificados/1-front-end-frente.jpeg" alt="mockup" />
+                    </div>
+                    <div class="lg:col-span-2 text-center">
+                        <h4 class="text-white text-2xl">
+                            Front-end (Verso) = Alura
+                        </h4>
+                        <img src="img/certificados/2-front-end-verso.jpeg" alt="mockup" />
+                    </div>
+                    <div class="lg:col-span-2 text-center">
+                        <h4 class="text-white text-2xl">
+                            A Partir dos Zero: HTML e CSS Para Projetos Web (Frente) = Alura
+                        </h4>
+                        <img src="img/certificados/3-apartir-do-zero-frente.jpeg" alt="mockup" />
+                    </div>
+                    <div class="lg:col-span-2 text-center">
+                        <h4 class="text-white text-2xl">
+                            A Partir dos Zero: HTML e CSS Para Projetos Web (Verso) = Alura
+                        </h4>
+                        <img src="img/certificados/4-apartir-do-zero-verso.jpeg" alt="mockup" />
+                    </div>
+                    <div class="lg:col-span-2 text-center">
+                        <h4 class="text-white text-2xl">
+                            A Partir do Zero: Iniciante em Programação (Frente) = Alura
+                        </h4>
+                        <img src="img/certificados/5-iniciante-em-programacao-frente.jpeg" alt="mockup" />
+                    </div>
+                    <div class="lg:col-span-2 text-center">
+                        <h4 class="text-white text-2xl">
+                            A Partir do Zero: Iniciante em Programação (Verso) = Alura = Alura
+                        </h4>
+                        <img src="img/certificados/6-iniciante-em-programacao-verso.jpeg" alt="mockup" />
+                    </div>
+                </div>
+
+            </div>
+    </section>
+    <!--FIM-->
+    <!--Contatos-->
+    <div id="contatos" class="mt-6">
+        <div
+            class="grid sm:grid-cols-2 items-start gap-12 p-8 mx-auto max-w-4xl bg-white shadow-[0_2px_10px_-3px_rgba(6,81,237,0.3)] rounded-md font-[sans-serif]">
+            <div>
+                <h1 class="text-gray-800 text-3xl font-bold">Vamos conversar!</h1>
+                <p class="text-sm text-gray-500 mt-4">"Tem uma grande ideia ou marca para desenvolver? Entre em contato,
+                    será um prazer conhecer seu projeto e ajudá-lo a crescer."
+
+                </p>
+
+                <div class="mt-12">
+                    <h2 class="text-gray-800 text-base font-bold">Email</h2>
+                    <ul class="mt-4">
+                        <li class="flex items-center">
+                            <div
+                                class="bg-[#e6e6e6cf] h-10 w-10 rounded-full flex items-center justify-center shrink-0">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill='#007bff'
+                                    viewBox="0 0 479.058 479.058">
+                                    <path
+                                        d="M434.146 59.882H44.912C20.146 59.882 0 80.028 0 104.794v269.47c0 24.766 20.146 44.912 44.912 44.912h389.234c24.766 0 44.912-20.146 44.912-44.912v-269.47c0-24.766-20.146-44.912-44.912-44.912zm0 29.941c2.034 0 3.969.422 5.738 1.159L239.529 264.631 39.173 90.982a14.902 14.902 0 0 1 5.738-1.159zm0 299.411H44.912c-8.26 0-14.971-6.71-14.971-14.971V122.615l199.778 173.141c2.822 2.441 6.316 3.655 9.81 3.655s6.988-1.213 9.81-3.655l199.778-173.141v251.649c-.001 8.26-6.711 14.97-14.971 14.97z"
+                                        data-original="#000000" />
+                                </svg>
+                            </div>
+                            <a href="javascript:void(0)" class="text-[#007bff] text-sm ml-4">
+                                <small class="block">Mail</small>
+                                <strong>marcusgers@hotmail.com</strong>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="mt-12">
+                    <h2 class="text-gray-800 text-base font-bold mt-8">Redes Sociais</h2>
+
+                    <ul class="flex mt-4 space-x-4">
+                        <li class="bg-[#e6e6e6cf] h-10 w-10 rounded-full flex items-center justify-center shrink-0">
+                            <a 
+                                target="_blank"
+                                href="https://wa.me/551153818319?text=Olá vim pelo site e gostaria de mais informações">
+                                <i class="fa-brands fa-whatsapp text-3xl"></i>
+                            </a>
+                        </li>
+                        <li class="bg-[#e6e6e6cf] h-10 w-10 rounded-full flex items-center justify-center shrink-0">
+                            <a  
+                                target="_blank"
+                                href="https://github.com/marcusrodriguesdev1989">
+                                <i class="fa-brands fa-github text-3xl"></i>
+                            </a>
+                        </li>
+                        <li class="bg-[#e6e6e6cf] h-10 w-10 rounded-full flex items-center justify-center shrink-0">
+                            <a  
+                                target="_blank"
+                                href="https://www.instagram.com/marcusrodrigues.dev/">
+                                <i class="fa-brands fa-instagram text-3xl"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <form class="ml-auo space-y-4">
+                <input type='text' placeholder='Nome'
+                    class="w-full text-gray-800 rounded-md py-2.5 px-4 border text-sm outline-none focus:border-blue-500" />
+                <input type='email' placeholder='Email'
+                    class="w-full text-gray-800 rounded-md py-2.5 px-4 border text-sm outline-none focus:border-blue-500" />
+                <input type='text' placeholder='Assunto'
+                    class="w-full text-gray-800 rounded-md py-2.5 px-4 border text-sm outline-none focus:border-blue-500" />
+                <textarea placeholder='Mensagem' rows="6"
+                    class="w-full text-gray-800 rounded-md px-4 border text-sm pt-2.5 outline-none focus:border-blue-500"></textarea>
+                <button type='button'
+                    class="text-white bg-blue-500 hover:bg-blue-600 rounded-md text-sm px-4 py-2.5 w-full !mt-6">Enviar</button>
+            </form>
+        </div>
+    </div>
+    <!--FIM-->
+    <!--FOOTER-->
+    <footer class="p-4 bg-white md:p-8 lg:p-10 dark:bg-gray-800">
+        <div class="mx-auto max-w-screen-xl text-center">
+            <a href="#" class="flex justify-center items-center text-2xl font-semibold text-gray-900 dark:text-white">
+                <svg class="w-6 h-6 text-green-400 dark:text-green-400" aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M8 8v8m0-8a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm0 8a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8-8a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm0 0a4 4 0 0 1-4 4h-1a3 3 0 0 0-3 3" />
+                </svg>
+                Marcus Rodrigues DEV
+            </a>
+            <ul class="flex flex-wrap justify-center items-center mb-6 text-gray-900 dark:text-white">
+                <li>
+                    <a href="#" class="mr-4 hover:underline md:mr-6 ">Home-</a>
+                </li>
+                <li>
+                    <a href="#" class="mr-4 hover:underline md:mr-6">Sobre-</a>
+                </li>
+                <li>
+                    <a href="#" class="mr-4 hover:underline md:mr-6 ">Projetos-</a>
+                </li>
+                <li>
+                    <a href="#" class="mr-4 hover:underline md:mr-6">Serviços-</a>
+                </li>
+                <li>
+                    <a href="#" class="mr-4 hover:underline md:mr-6">Certificados-</a>
+                </li>
+                <li>
+                    <a href="#" class="mr-4 hover:underline md:mr-6">Contatos</a>
+                </li>
+            </ul>
+            <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2025 <a href="#"
+                    class="hover:underline">Marcus Rodrigues-dev™</a>. All Rights Reserved.</span>
+        </div>
+    </footer>
+    <!--FIM-->
+    <script src="src/js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
+</body>
+
+</html>
