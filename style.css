@@ -2,20 +2,3 @@
     scroll-behavior: smooth;
 }
 
-#sobre-content,  #projeto-content div{
-    animation: reveal 1ms ease-in-out both;
-    animation-timeline: view();
-    animation-range: cover 0% cover 50%;
-}
-
-@keyframes reveal {
-    from {
-        opacity: 0;
-        clip-path: inset(45% 20% 45% 20%);
-    }
-
-    to {
-        opacity: 1;
-        clip-path: inset(0% 0% 0% 0%);
-    }
-}
