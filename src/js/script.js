@@ -34,3 +34,36 @@ themeToggleBtn.addEventListener('click', function() {
     }
     
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const animationType = entry.target.dataset.animation;
+            entry.target.classList.add(animationType || "fade-in-up");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.1, rootMargin: "0px 0px -50px 0px" } // Ajuste a margem para animar antes de entrar totalmente
+    );
+  
+    // Observa todos os elementos com a classe 'animate-on-scroll'
+    document.querySelectorAll(".animate-on-scroll").forEach((element) => {
+      observer.observe(element);
+    });
+  });
+
+  function openModal(imageSrc, event) {
+    event.preventDefault();
+    const modal = document.getElementById('imagemodal');
+    const modalImage = document.getElementById('modal-image');
+    modalImage.src = imageSrc;
+    modal.style.display = 'block'; // Exibe o modal
+  }
+  
+  function closeModal() {
+    const modal = document.getElementById('imagemodal');
+    modal.style.display = 'none'; // Oculta o modal
+  }

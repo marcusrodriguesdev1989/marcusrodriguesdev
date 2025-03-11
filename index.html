@@ -14,9 +14,9 @@
     <title>Marcus Rodrigues Portifólio</title>
 </head>
 
-<body">
+<body class="dark:bg-gray-900">
     <!--NAVBAR-->
-    <header class="sticky top-0 w-full z-20">
+    <header class="sticky top-0 w-full z-20 animate-on-scroll" data-animation="fade-in-up"></header>
         <nav class="bg-white border-gray-200 px-4 lg:px-6 py-2 dark:bg-gray-900">
             <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
                 <a href="#" class="flex items-center gap-2">
@@ -144,8 +144,8 @@
 
                 <a target="_blank"
                     href="https://wa.me/5511953818319?text=Olá vim pelo site e gostaria de mais informações"
-                    class="flex items-center justify-center text-white bg-green-500 hover:bg-green-600 flex text-white dark:text-white focus:ring-4 focus:ring-green-300 font-extrabold rounded-lg text-sm lg:text3xl px-4 lg:px-4 py-4 mr-2 dark:hover:bg-green-600 focus:outline-none">
-                    <svg class="w-4 h-4 lg:w-5 h-5 text-white dark:text-white dark:shadow-green-600" aria-hidden="true"
+                    class="flex items-center justify-center text-white bg-green-500 hover:bg-green-600 gap-2 dark:text-white focus:ring-4 focus:ring-green-300 font-extrabold rounded-lg text-xl lg:text3xl px-4 lg:px-4 py-4 mr-2 dark:hover:bg-green-600 focus:outline-none">
+                    <svg class="w-4 h-4 lg:w-5 text-white dark:text-white dark:shadow-green-600 " aria-hidden="true"
                         xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                         <path fill="currentColor" fill-rule="evenodd"
                             d="M12 4a8 8 0 0 0-6.895 12.06l.569.718-.697 2.359 2.32-.648.379.243A8 8 0 1 0 12 4ZM2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10a9.96 9.96 0 0 1-5.016-1.347l-4.948 1.382 1.426-4.829-.006-.007-.033-.055A9.958 9.958 0 0 1 2 12Z"
@@ -184,8 +184,8 @@
 
         </div>
     </section>
-    <div class="mb-3 mx-auto text-center md:max-w-screen-md lg:max-w-screen-lg">
-        <div class="flex lg:flex flex-wrap justify-center items-center mt-3 text-gray-500 sm:justify-between">
+    <div class="mb-3 mx-auto text-center  md:max-w-screen-md lg:max-w-screen-lg skill-bar animate-on-scroll" data-animation="scale-in">
+        <div class="flex lg:flex flex-wrap justify-center items-center mt-3 text-gray-500 sm:justify-between skill-bar animate-on-scroll" data-animation="float-in">
             <a href="https://www.youtube.com/watch?v=RISPTY1Lh2A&t=1s" target="_blank"
                 class="mr-5 mb-5 font-bold lg:mb-0 hover:text-gray-800 dark:hover:text-gray-400">
                 <img class="w-20 h-20 text-gray-800 dark:text-white" src="img/icons8-html-480.png" alt="" />
@@ -231,7 +231,7 @@
     </div>
     <!--FIM-->
     <!--SOBRE-->
-    <section id="sobre" class="bg-white dark:bg-gray-900">
+    <section id="sobre" class="bg-white dark:bg-gray-900 animate-on-scroll" data-animation="fade-in-up">
         <div id="sobre-content" class="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
             <div class="mr-auto place-self-center lg:col-span-7">
                 <h1 class="max-w-2xl mb-4 text-4xl font-extrabold leading-none md:text-4xl xl:text-4xl dark:text-white">
@@ -256,8 +256,8 @@
     </section>
     <!--FIM-->
     <!--Projetos-->
-    <section id="projetos" class="bg-white dark:bg-gray-900 antialiased data-twe-smooth-scroll-init">
-        <div id="projeto-content" class="max-w-screen-xl px-4 py-8 mx-auto lg:px-6 sm:py-16 lg:py-24">
+    <section id="projetos" class="bg-white dark:bg-gray-900 antialiased data-twe-smooth-scroll-init animate-on-scroll" data-animation="fade-in-right">
+        <div id="projeto-content" class="max-w-screen-xl px-4 py-8 mx-auto lg:px-6 sm:py-16 lg:py-24 project-card animate-on-scroll" data-animation="scale-in">
             <div class="max-w-2xl mx-auto text-center">
                 <h2
                     class="text-4xl font-extrabold leading-tight tracking-tight text-gray-900 sm:text-4xl dark:text-white mb-10">
@@ -266,7 +266,7 @@
             </div>
             <div
                 class="grid grid-cols-1 mt-12 text-center sm:mt-16 gap-x-20 gap-y-12 sm:grid-cols-2 lg:grid-cols-3 py-0 px-1">
-                <div class="border border-gray-700 rounded-lg space-y-4">
+                <div class="border border-gray-700 rounded-lg space-y-4 project-card animate-on-scroll" data-animation="scale-in" style="animation-delay: 0.2s">
                     <span
                         class="bg-gray-100 text-gray-900 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300">
                         HTML-CSS-SASS
@@ -291,7 +291,7 @@
                     </a>
                 </div>
 
-                <div class="border border-gray-700 rounded-lg space-y-4">
+                <div class="border border-gray-700 rounded-lg space-y-4 project-card animate-on-scroll" data-animation="scale-in" style="animation-delay: 0.2s">
                     <span
                         class="bg-gray-100 text-gray-900 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300">
                         HTML-TailWind-JavaScript-(Dark Mode)
@@ -316,7 +316,7 @@
                     </a>
                 </div>
 
-                <div class="border border-gray-700 rounded-lg space-y-4">
+                <div class="border border-gray-700 rounded-lg space-y-4 project-card animate-on-scroll" data-animation="scale-in" style="animation-delay: 0.2s">
                     <span
                         class="bg-gray-100 text-gray-900 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300">
                         HTML-CSS-JavaScript
@@ -340,7 +340,7 @@
                         </svg>
                     </a>
                 </div>
-                <div class="border border-gray-700 rounded-lg space-y-4">
+                <div class="border border-gray-700 rounded-lg space-y-4 project-card animate-on-scroll" data-animation="scale-in" style="animation-delay: 0.2s">
                     <span
                         class="bg-gray-100 text-gray-900 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300">
                         HTML-CSS-JavaScript
@@ -364,7 +364,7 @@
                         </svg>
                     </a>
                 </div>
-                <div class="border border-gray-700 rounded-lg space-y-4">
+                <div class="border border-gray-700 rounded-lg space-y-4 project-card animate-on-scroll" data-animation="scale-in" style="animation-delay: 0.2s">
                     <span
                         class="bg-gray-100 text-gray-900 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300">
                         JavaScript
@@ -388,7 +388,7 @@
                         </svg>
                     </a>
                 </div>
-                <div class="border border-gray-700 rounded-lg space-y-4">
+                <div class="border border-gray-700 rounded-lg space-y-4 project-card animate-on-scroll" data-animation="scale-in" style="animation-delay: 0.2s">
                     <span
                         class="bg-gray-100 text-gray-900 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300">
                         HTML-CSS-Next.JS-Node
@@ -465,7 +465,7 @@
     </section>
     <!--FIM-->
     <!--certificados-->
-    <section id="certificados" class="items-center justify-center bg-white dark:bg-gray-900">
+    <section id="certificados" class="items-center justify-center bg-white dark:bg-gray-900 py-10">
         <div>
             <div class="flex flex-col items-center justify-center">
                 <h1
@@ -473,41 +473,76 @@
                     Certificados
                 </h1>
                 <div class="flex flex-col items-center justify-centerjustify-center lg:grid lg:grid-cols-1">
-                    <div class="lg:col-span-2 text-center pb-10">
+                    <div class="certificado-item lg:col-span-2 text-center pb-10">
                         <h4 class="hidden lg:block text-white text-2xl">
                             Front-end (Frente) = Alura
                         </h4>
-                        <img 
-                            class=""
-                            src="img/certificados/1-front-end-frente.jpeg" alt="mockup" />
+                        <a href="#">
+                            <img 
+                                class="w-1/2 h-auto mx-auto transform"
+                                src="img/certificados/1-front-end-frente.jpeg" 
+                                alt="mockup" 
+                                onclick="openModal('img/certificados/1-front-end-frente.jpeg', event); return false"
+                                />
+                        </a>
                     </div>
 
-                    <div class="lg:col-span-2 text-center pb-10">
+                    <div class="certificado-item lg:col-span-2 text-center pb-10">
                         <h4 class="hidden lg:block  text-white text-2xl">
                             A Partir dos Zero: HTML e CSS Para Projetos Web (Frente) = Alura
                         </h4>
-                        <img src="img/certificados/3-apartir-do-zero-frente.jpeg" alt="mockup" />
+                        <a href="#">
+                            <img 
+                            class="w-1/2 h-auto mx-auto transform"
+                            src="img/certificados/3-apartir-do-zero-frente.jpeg" 
+                            alt="mockup" 
+                            onclick="openModal('img/certificados/3-apartir-do-zero-frente.jpeg', event); return false"
+                            />
+                        </a>
                     </div>
 
-                    <div class="lg:col-span-2 text-center pb-10">
+                    <div class="certificado-item lg:col-span-2 text-center pb-10">
                         <h4 class="hidden lg:block  text-white text-2xl">
                             A Partir do Zero: Iniciante em Programação (Frente) = Alura
                         </h4>
-                        <img src="img/certificados/5-iniciante-em-programacao-frente.jpeg" alt="mockup" />
+                        <a href="#">
+                            <img 
+                            class="w-1/2 h-auto mx-auto transform"
+                            src="img/certificados/5-iniciante-em-programacao-frente.jpeg" 
+                            alt="mockup" 
+                            onclick="openModal('img/certificados/5-iniciante-em-programacao-frente.jpeg', event); return false"
+                            />
+                        </a>
                     </div>
-                    <div class="lg:col-span-2 text-center pb-10">
+                    <div class="certificado-item lg:col-span-2 text-center pb-10">
                         <h4 class="hidden lg:block  text-white text-2xl">
                             Jornada Python = Hashtag
                         </h4>
-                        <img src="img/certificados/certificado hashtag_page-0001.jpg" alt="mockup" />
+                        <a href="#">
+                        <img 
+                            class="w-1/2 h-auto mx-auto transform"
+                            src="img/certificados/certificado hashtag_page-0001.jpg"
+                            alt="mockup" 
+                            onclick="openModal('img/certificados/certificado hashtag_page-0001.jpg', event); return false" 
+                            />
+                        </a>
+                    </div>
+                    <!-- Modal -->
+                    <div id="imagemodal" class="hidden fixed inset-0 bg-black bg-opacity-90">
+                        <span onclick="closeModal()" class="cursor-pointer text-white text-4xl absolute top-4 right-4">&times;</span>
+                        <img id="modal-image" class="max-w-full max-h-screen m-auto">
                     </div>
                 </div>
-
+                
             </div>
+            
     </section>
+
+    
     <!--FIM-->
     <!--Contatos-->
     <div id="contatos" class="mt-6">
+        <h1 class="mb-4 text-4xl text-center font-extrabold leading-none md:text-4xl xl:text-4xl dark:text-white">Contatos</h1>
         <div
             class="grid sm:grid-cols-2 items-start gap-12 p-8 mx-auto max-w-4xl bg-white shadow-[0_2px_10px_-3px_rgba(6,81,237,0.3)] rounded-md font-[sans-serif]">
             <div>
@@ -621,7 +656,10 @@
         </div>
     </footer>
     <!--FIM-->
-    
+    <div id="imagemodal" class="hidden fixed inset-0 bg-black bg-opacity-90">
+        <span onclick="closeModal()" class="cursor-pointer text-white text-4xl absolute top-4 right-4">&times;</span>
+        <img id="modal-image" class="max-w-full max-h-screen m-auto">
+    </div>
     <script src="src/js/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
 </body>
