@@ -46,10 +46,9 @@ document.addEventListener("DOMContentLoaded", () => {
           }
         });
       },
-      { threshold: 0.1, rootMargin: "0px 0px -50px 0px" } // Ajuste a margem para animar antes de entrar totalmente
+      { threshold: 0.1, rootMargin: "0px 0px -50px 0px" }
     );
   
-    // Observa todos os elementos com a classe 'animate-on-scroll'
     document.querySelectorAll(".animate-on-scroll").forEach((element) => {
       observer.observe(element);
     });
